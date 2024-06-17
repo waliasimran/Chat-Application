@@ -1,0 +1,26 @@
+In package.json,in the scripts section, I have written "start":node backend/server.js",therefore now to start the project every time write npm start.
+To start the react app,go to frontend and then run npm start
+To use react-router-dom wrap the whole app in BrowserRouter(in index.js file)
+rafce to get the react syntax
+To fetch api, a package called axios is installed.
+UseEffect runs when the component is rendered for the first time.
+chats is used to display the data while setChats is used to set the value of chats
+users array in chatModel.js will contain the id to a particular user,so we will reference it to that particular user
+timestamp is used so that mongoose creates a new timestamp whenever we add a new data.
+CONTAINERS: Containers help to make our responsive
+express async handler helps in error handling
+
+First go to server.js,there we find a route api/user and then go to userRoutes,there by adding on / to api/user registerUser will execute and user will be registered since it was a post request.
+
+JWT helps to authorize the user in the backend
+
+To accept json data from the user while registering,to the server.js add app.use(express.json)
+
+MUST SEE HOW TO CONVERT JSON TO STRINGIFY:
+"[\"ab\",\"de\"]"
+
+Context API: Helps us to manage the state of our app.It helps to put state at the top so that we can fetch the state directly from a single place.
+
+Socket has to be cleaned at the end when its role is over...otherwise it would consume a large bandwidth
+
+Create a global state for notifications.
