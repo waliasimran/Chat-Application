@@ -67,7 +67,23 @@ app.use('/api/message', messageRoutes);
 
 //------------------DEPLOYMENT--------------------
 
-//  const __dirname1=path.resolve();
+  const __dirname2=path.resolve();
+  if(process.env.NODE_ENV==='production')
+    {
+      //establishing a path from current working directory to the build folder of frontend.
+     app.use(express.static(path.join(__dirname2,"/frontend/build")));
+     app.get('*',(req,res)=>{
+      res.sendFile(path.resolve(__dirname2,"frontend","build","index.html"));
+     }) 
+    }
+    else
+    {
+      app.get("/",(req,res)=>{
+        res.send("API is running successfully");
+      });
+    }
+
+  //----------------DEPLOYMENT--------------------
 
 // Error handling middleware
 app.use(notFound);
